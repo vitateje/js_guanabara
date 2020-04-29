@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: brown;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        var nome = window.prompt('Qual seu nome?')
+
+        document.write(`Ola ${nome}. Seu nome tem ${nome.length} letras<br/>`)        
+        document.write(`Seu nome em maiusculas é ${nome.toUpperCase()}<br/>`)
+        document.write(`Seu nome em minusculas é ${nome.toLowerCase()}<br/>`)
+
+        var n1 = 15.5
+        document.write(n1.toFixed(2) + ' Com duas casas decimais') // duas casas apos a virgula
+
+        var ncash = n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})
+        alert(ncash) // USD // EUR
+
+    </script>
+</body>
+</html>

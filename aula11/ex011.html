@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CONDIÇÕES PARTE 1</title>
+
+    <style> 
+    body {
+        background: purple;
+    }
+    </style>
+</head>
+<body>
+    <h2> Condições parte 1 </h2>
+    <h1> Identificação de Nacionalidade</h1>
+
+    Em qual país você vive ? <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="check()">
+    <div id="res"></div>
+
+    <script>
+    
+    function check() {
+
+        var txtnac = document.getElementById('txtnac')
+        var res = document.getElementById('res')
+        var nac = txtnac.value
+
+        res.innerHTML = `<p> Voce vive no(a) ${nac} </p>`
+
+        if (nac == 'Brasil' || nac == 'BRASIL' || nac == 'brasil') 
+            {
+            res.innerHTML += `<p> Você é Brasileiro(a) </p>`
+            }
+        else 
+            {
+            res.innerHTML += `<p> Você é Estrangeiro(a) </p>`
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>
